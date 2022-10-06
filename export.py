@@ -55,6 +55,7 @@ import time
 import warnings
 from pathlib import Path
 
+import onnx
 import pandas as pd
 import torch
 from torch.utils.mobile_optimizer import optimize_for_mobile
