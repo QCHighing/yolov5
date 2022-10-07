@@ -68,10 +68,7 @@ def SelectDevice(device: str):
     return device
 
 
-def LoadModel(weights: str, source: str, device):
-    source = str(source)
-    webcam = source.isnumeric()
-
+def LoadModel(weights: str, device):
     model = attempt_load(weights, device=device, inplace=True, fuse=True)
     label_names = model.module.names if hasattr(model, 'module') else model.names
     stride = model.stride.numpy()
